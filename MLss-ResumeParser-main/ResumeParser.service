@@ -1,0 +1,14 @@
+[Unit]
+Description=ResumeParser Service
+
+[Service]
+Type=forking
+RemainAfterExit=yes
+ExecStart=/bin/bash -c /home/ubuntu/MLss-ResumeParser/start_service.sh
+User=ubuntu
+Restart=always
+RestartSec=60
+StandardOutput=syslog
+StandardError=syslog
+[Install]
+WantedBy=multi-user.target
